@@ -19,7 +19,7 @@
     "jsonnet"
   ],
   "scripts": {
-    "client:esbuild-base": "mkdir -p ./out && cp ./node_modules/vscode-languageclient/lib/utils/electronForkStart.js ./out/ && esbuild ./client/extension.ts --bundle --outfile=out/client.js --external:vscode --format=cjs --platform=node",
+    "client:esbuild-base": "cp ./node_modules/vscode-languageclient/lib/utils/electronForkStart.js ./out/ && esbuild ./client/extension.ts --bundle --outfile=out/client.js --external:vscode --format=cjs --platform=node",
     "client:esbuild": "npm run -S client:esbuild-base -- --sourcemap",
     "client:esbuild-release": "npm run -S client:esbuild-base -- --minify",
     "client:esbuild-watch": "npm run -S client:esbuild-base -- --sourcemap --watch",
