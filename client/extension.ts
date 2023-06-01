@@ -595,6 +595,7 @@ export namespace ksonnet {
   }
 
   function checkForKsonnet(filePath: string): boolean {
+    return false;
     if (filePath === "/") {
       return false;
     }
